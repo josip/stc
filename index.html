@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple, tiny &amp; cute.js</title>
+    <script type="text/javascript" src="chart.js"></script>
+    <style type="text/css">
+      body {
+        background: #fff url(exclusive_paper.png) 0 0 fixed; /*#DEDFDE;*/
+        color: #000;
+        margin: 0 auto;
+        font-family: roboto, helvetica, sans-serif;
+        font-size: 16px;
+      }
+
+      #chart {
+        border-left: 0 solid #c5d6ee;
+        border-right: 0 solid #c5d6ee;
+        border-bottom: 0 double #c5d6ee;
+        cursor: default !important;
+        -webkit-user-select: none;
+      }
+
+      #save {
+        display: block;
+        position: absolute;
+        background: #c0c0c0;
+        font-size: 0.7em;
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: #DEDFDE;
+        text-decoration: none;
+        /*margin-left: 760px;*/
+      }
+      #save:hover {color: #fff;}
+
+      h1 {
+        color: #00b;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'oswald stencil', roboto, helvetica, sans-serif;
+        border-bottom: 3px double #c5d6ee;
+        margin: 0;
+        padding: 20px 0;
+      }
+
+      h1 small { font-size: 0.61em; }
+
+      h2 { font-size: 18px; margin: 0; clear: both; }
+
+      header, #content, footer {
+        width: 802px;
+        margin: auto;
+      }
+
+      #content {
+        width: 800px;
+        border: 1px solid #c5d6ee;
+        border-top: 0;
+        border-bottom: 0;
+        background: #fff;
+      }
+      #content p { margin: 5px 5px 15px 5px; }
+
+      #columns > * { float: left; }
+      aside {
+        width: 340px;
+        padding: 10px;
+      }
+      #realstuff {
+        width: 419px;
+        padding: 10px;
+        background: #e8e8e8;
+        border-left: 1px solid #c5d6ee;
+      }
+
+      #dlinks {
+        text-align: center;
+        padding: 15px 0;
+        word-spacing: 0;
+        letter-spacing: 0;
+        font-size: 0;
+      }
+      #dlinks a {
+        display: inline-block;
+        margin: 0;
+        height: 40px;
+        border: 1px solid #c5d6ee;
+        border-left: 0;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 16px;
+        color: #00b;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      #dlinks a:first-child {
+        border-left: 1px solid #c5d6ee;
+      }
+      #dlinks a:hover {
+        background: #d93b3b;
+        color: #fff;
+      }
+      #dlinks a small { font-size: 0.7em; font-weight: normal; }
+
+      h2:first-letter {
+        color: #d93b3b;
+        display: block;
+      }
+
+      footer {
+        height: 140px;
+        overflow: hidden;
+        padding: 40px 0 0 0;
+        border-top: 3px double #c5d6ee;
+      }
+
+      footer h1 {
+        display: block;
+        height: 140px !important;
+        vertical-align: middle;
+        line-height: 140px;
+        position: relative;
+        top: -140px;
+        margin: 0;
+      }
+
+      .gist {font-size: 0.7em;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" id="save">Save</a>
+      <canvas id="chart" width="800" height="140"></canvas>
+      <h1>Simple, tiny &amp; cute.js<br/><small>A Charting library for JavaScript</small></h1>
+    </header>
+    <div id="content">
+      <div id="columns">
+        <aside>
+          <h2>&#10122; Download the library</h2>
+          <p id="dlinks">
+            <a href="#">STC.JS<br/><small>8 KB</small></a>
+            <a href="#">STC.MIN.JS<br/><small>4 KB</small></a>
+            <a href="#">STC.QML.JS<br/><small>8 KB</small></a>
+            <br style="clear:both"/>
+          </p>
+
+          <h2>&#10123; Create a SCT object</h2>
+          <script src="https://gist.github.com/2105762.js?file=init.js"></script>
+
+          <h2>&#10124; Plot the data</h2>
+          <script src="https://gist.github.com/2105762.js?file=plot.js"></script>
+
+          <h2>&#10125; Get your <strike>hands</strike>mind dirty!</h2>
+        </aside>
+        <div id="realstuff">
+          <h2>&#9787; Oh noes, not another one!</h2>
+          <p>
+            Oh yes! <em>Simple, tiny &amp; cute.js</em> is yet another charting library for JavaScript! Sure, there's already a gazillion of these but with all this horrible news going on, I've really felt that what the world now needs is another charting library. This is my small contribution to the world's legacy.
+          </p>
+
+          <h2>&#9787; What's with the name?</h2>
+          <p>
+            <ul>
+              <li>Simple &mdash; STC knows how do draw only simple charts, has no fancy features like drawing negative values or managing values on the axes (that's all for you to sort it out!)</li>
+              <li>Tiny &mdash; It's only 4 KB of compressed JavaScript code and 8 KB when uncompressed. You can even easily remove the features you don't need to squeeze the file size even more.</li>
+              <li>Cute &mdash; Just look at the site. Can't you feel it?</li>
+            </ul>
+          </p>
+
+          <h2>&#9787; One more thing</h2>
+          <p>
+            STC was actually built for use with <a href="http://qt.gitorious.org/qt-labs/qmlcanvas">qmlcanvas</a>, a superb piece of code which provides a HTML5 canvas-like API for QML applications. Don't you just love standards?
+          </p>
+
+          <h2>&#9787; Licence</h2>
+          <p>
+            STC is published under the <abbr title="Muffins+MIT">MMIT</abbr> license. Any violations of the licence will be taken seriously and reported to local authorities.
+          </p>
+        </div>
+
+        <br style="clear:both"/>
+      </div>
+    </div>
+    <footer>
+      <canvas id="triglav" width="800" height="140"></canvas>
+      <h1><small>Your charts are as interesting as your data is.</small></h1>
+    </footer>
+
+    <script type="text/javascript">
+      (function () {
+      var header = document.getElementById('chart'),
+          hctx = header.getContext('2d'),
+          hc = new STC(hctx, {
+            w: 800,
+            h: 140,
+            padding: 0.0001,
+            axes: false,
+            background: false, //'#DEDFDE',
+            grid: false// '#c5d6ee'
+          }),
+          heart = [
+            [3.7, 6,   '2'],
+            [4,   7.5, '3'],
+            [5,   1,   '1'],
+            [5,   6,   '4'],
+            [6,   7.5, '5'],
+            [6.3, 6,   '6'],
+            [10,  9,   '<3']
+          ],
+          waves = [
+            [0,   4, '1'],
+            [0.5, 2.5, '2'],
+            [1,   4, '3'],
+            [1.5, 2.6, '4'],
+            [2,   4, '5'],
+            [2.5, 2.7, '6'],
+            [3,   4, '7'],
+            [3.5, 2.8, '8'],
+            [4,   4, '9'],
+            [4.5, 2.9, '10'],
+            [5,   4, '11'],
+            [5.5, 3, '12'],
+            [6,   4, '13'],
+            [6.5, 3, '14'],
+            [7,   4, '15'],
+            [7.5, 3, '16'],
+            [8,   4, '17'],
+            [8.5, 3, '18'],
+            [9,   2, '19'],
+            [9.5, 3, '20'],
+            [9.78, 5, '21'],
+            [9.5,  7, '22'],
+            [9.25, 5, '23'],
+            [9.15, 6.5, '24'],
+            [9.35, 9, '25'],
+            [9.78, 8, '26'],
+            [10, 10, '<3']
+          ],
+          m = 2,
+          hai = [
+            // H
+            [m + 1,  1,  '2'],
+            [m + 1,  9,  '1'],
+            [m + 1,  5,  '3'],
+            [m + 2,  5,  '4'],
+            [m + 2,  9,  '5'],
+            [m + 2,  1,  '6.'],
+
+            // A
+            [m + 3,     1,  '7'],
+            [m + 3.5,   9,  '8'],
+            [m + 4,     1,  '9'],
+            [m + 3.75,  5,  '10'],
+            [m + 3.25,  5,  '11.'],
+
+            // I
+            [m + 5,  1, '13.'],
+            [m + 5,  8, '12'],
+            [m + 5,  9, '14.'],
+
+
+            [10,  10,   '<3']
+          ],
+          triglavHeader = [
+            [0.1, 0.5, '1'],
+            [4.2, 4, '2'],
+            [4.5, 3.5, '3/5'],
+            [5, 2.5, '4.'],
+            [5, 6, '6'],
+            [5.3, 5, '7.'],
+            [5.1, 4, '8'],
+            [5.5, 5.5, '9'],
+            [6, 3.5, '10'],
+            [9.75, 0.5, '11'],
+            [10, 7, '<3']
+          ],
+          triglavFooter = [
+            [0, 0],
+            [4.2, 4],
+            [4.5, 3.5],
+            [5, 6],
+            [5.3, 5],
+            [5.5, 5.5],
+            [10, 0]
+          ];
+      hc.plot(triglavHeader, {type: 'point'});
+
+      var _header_down = false,
+          last_pos = [],
+          _last_pos = [],
+          hi;
+      header.onmousedown = function (e) {
+        _header_down = true;
+        _last_pos = [];
+        hi = setInterval(mouseTracker, 20);
+        e.preventDefault();
+      };
+      header.onmouseup = header.onmouseout = function () {
+        clearInterval(hi);
+        _header_down = false;
+        _last_pos = [];
+      };
+      header.onmousemove = function (e) {
+        if(!_header_down) return;
+        last_pos = [e.offsetX, e.offsetY];
+      };
+      var mouseTracker = function () {
+        if(!last_pos) return;
+
+        hctx.strokeStyle = '#000';
+        hctx.lineWidth = 2;
+        hctx.beginPath();
+        hctx.moveTo(_last_pos[0] || last_pos[0], _last_pos[1] || last_pos[1]);
+        hctx.lineTo(last_pos[0], last_pos[1]);
+        _last_pos = last_pos;
+        last_pos = null;
+        hctx.stroke();
+      };
+
+      var footer = document.getElementById('triglav'),
+          fc = new STC(footer.getContext('2d'), {
+            w: 800,
+            h: 140,
+            padding: 0.0001,
+            axes: false,
+            background: false, //'#DEDFDE',
+            grid: false
+          });
+      fc.plot(triglavFooter, {
+        type: 'area',
+        fill: '#fff'
+      });
+
+      document.getElementById('save').onclick = function () {
+        window.open(header.toDataURL(), '_blank', 'width=800,height=140');
+      }
+     })();
+    </script>
+  </body>
+</html>
