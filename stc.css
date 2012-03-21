@@ -1,0 +1,123 @@
+body {
+  background: #fff url(img/bg.png) 0 0 fixed; /*#DEDFDE;*/
+  color: #000;
+  margin: 0 auto;
+  font-family: roboto, helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#chart {
+  border-left: 0 solid #c5d6ee;
+  border-right: 0 solid #c5d6ee;
+  border-bottom: 0 double #c5d6ee;
+  cursor: default !important;
+  -webkit-user-select: none;
+}
+
+#save {
+  display: block;
+  position: absolute;
+  background: #c0c0c0;
+  font-size: 0.7em;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #DEDFDE;
+  text-decoration: none;
+  /*margin-left: 760px;*/
+}
+#save:hover {color: #fff;}
+
+h1 {
+  color: #00b;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'oswald stencil', roboto, helvetica, sans-serif;
+  border-bottom: 3px double #c5d6ee;
+  margin: 0;
+  padding: 20px 0;
+}
+
+h1 small { font-size: 0.61em; }
+
+h2 { font-size: 18px; margin: 0; clear: both; }
+
+header, #content, footer {
+  width: 802px;
+  margin: auto;
+}
+
+#content {
+  width: 800px;
+  border: 1px solid #c5d6ee;
+  border-top: 0;
+  border-bottom: 0;
+  background: #fff;
+}
+#content p { margin: 5px 5px 15px 5px; }
+
+#columns > * { float: left; }
+aside {
+  width: 340px;
+  padding: 10px;
+}
+#realstuff {
+  width: 419px;
+  padding: 10px;
+  background: #e8e8e8;
+  border-left: 1px solid #c5d6ee;
+}
+
+#dlinks {
+  text-align: center;
+  padding: 15px 0;
+  word-spacing: 0;
+  letter-spacing: 0;
+  font-size: 0;
+}
+#dlinks a {
+  display: inline-block;
+  margin: 0;
+  height: 40px;
+  border: 1px solid #c5d6ee;
+  border-left: 0;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #00b;
+  text-decoration: none;
+  font-weight: bold;
+}
+#dlinks a:first-child {
+  border-left: 1px solid #c5d6ee;
+}
+#dlinks a:hover {
+  background: #d93b3b;
+  color: #fff;
+}
+#dlinks a small { font-size: 0.7em; font-weight: normal; }
+
+h2:first-letter {
+  color: #d93b3b;
+  display: block;
+}
+
+footer {
+  height: 140px;
+  overflow: hidden;
+  padding: 40px 0 0 0;
+  border-top: 3px double #c5d6ee;
+}
+
+footer h1 {
+  display: block;
+  height: 140px !important;
+  vertical-align: middle;
+  line-height: 140px;
+  position: relative;
+  top: -140px;
+  margin: 0;
+}
+
+.gist {font-size: 0.7em;}
