@@ -7,10 +7,13 @@ body {
 }
 
 #chart {
-  border-left: 0 solid #c5d6ee;
-  border-right: 0 solid #c5d6ee;
-  border-bottom: 0 double #c5d6ee;
+  padding: 0 0 5px 0;
+  margin: 0;
+  background: #fff;
+  border-left: 1px solid #c5d6ee;
+  border-right: 1px solid #c5d6ee;
   cursor: default !important;
+  border-bottom: 3px double #c5d6ee;
   -webkit-user-select: none;
 }
 
@@ -41,7 +44,26 @@ h1 {
 
 h1 small { font-size: 0.61em; display: block; }
 
+
 h2 { font-size: 18px; margin: 0; clear: both; }
+
+h2:first-letter {
+  color: #d93b3b;
+}
+
+h2 a {
+  display: block;
+  color: #d93b3b;
+  text-decoration: none;
+  padding: 5px 5px 5px 0;
+}
+
+h2 a:hover {
+  background: #d93b3b;
+  color: #fff !important;
+}
+
+h2 strike { opacity: 0.7 }
 
 header, #content, footer {
   width: 802px;
@@ -97,11 +119,6 @@ aside {
   color: #fff;
 }
 #dlinks a small { font-size: 0.7em; font-weight: normal; }
-
-h2:first-letter {
-  color: #d93b3b;
-  display: block;
-}
 
 footer {
   height: 140px;
