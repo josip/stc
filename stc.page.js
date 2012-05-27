@@ -21,7 +21,7 @@ charts.heart = [
   [10,  9,   '<3']
 ];
 charts.waves = [
-  [0,   4, '1'],
+  [0.1,   4, '1'],
   [0.5, 2.5, '2'],
   [1,   4, '3'],
   [1.5, 2.6, '4'],
@@ -86,8 +86,44 @@ charts.triglav = [
   [9.75, 0.5, '11'],
   [10, 7, '<3']
 ];
-var chartsN = ['heart', 'waves', 'hai', 'triglav'];
-hc.plot(charts[chartsN[Math.floor(Math.random() * chartsN.length)]]);
+charts.tractor = [
+  // little wheel
+  [300, 105, '1/5./11'],
+  [285, 120, '2'],
+  [300, 135, '3'],
+  [315, 120, '4/21'],
+
+  // big wheel
+  [460, 60,  '6./10./17'],
+  [420, 95,  '7/20.'],
+  [460, 135, '8'],
+  [500, 95,  '9'],
+
+  // outline
+  //[457,55, '9'],
+  [460,10, '16'],
+  [400,10, '15'],
+  [390,60, '14/18/23'],
+  [310,60, '13'],
+  [300,70, '12'],
+
+  // bottom
+  [430, 115, '22.'],
+
+  // doors
+  [390, 95, '19'],
+  
+  [800, 0, '<3']
+];
+var x = charts.tractor.length;
+while(x--)
+  charts.tractor[x][1] = 140 - charts.tractor[x][1];
+
+var chartsN = ['heart', 'waves', 'hai', 'triglav', 'tractor'],
+    hash = window.location.hash.slice(1),
+    n = chartsN.indexOf(hash) !== -1 ? chartsN.indexOf(hash) : Math.floor(Math.random() * chartsN.length); 
+
+hc.plot(charts[chartsN[n]]);
 
 var _header_down = false,
     last_pos = [],
@@ -120,6 +156,16 @@ var mouseTracker = function () {
   last_pos = null;
   hctx.stroke();
 };
+/*
+window.coords = [];
+header.onclick = function (e) {
+  console.log('click', e.offsetX, e.offsetY);
+  coords.push([e.offsetX, e.offsetY]);
+  hctx.beginPath();
+  hctx.arc(e.offsetX, e.offsetY, 2, 0, Math.PI*2, true);
+  hctx.fill();
+};
+*/
 
 var footer = document.getElementById('triglav'),
     fc = new STC(footer.getContext('2d'), {

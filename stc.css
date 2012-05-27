@@ -39,7 +39,7 @@ h1 {
   padding: 20px 0;
 }
 
-h1 small { font-size: 0.61em; }
+h1 small { font-size: 0.61em; display: block; }
 
 h2 { font-size: 18px; margin: 0; clear: both; }
 
